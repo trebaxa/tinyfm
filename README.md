@@ -2,8 +2,8 @@
 Tiny filemanager for tinyMCE or also as standalone solution
 
 
-Configure tintyMCE
-
+## Configure tintyMCE
+```
 ...
 external_filemanager_path:"!!PATH_TO_TINYFM_INSTALLATION!!",     
 filemanager_access_key:"!!ENTER_ACCESSKEY_FROM_TINYMFM_CONFIG!!",
@@ -16,3 +16,4 @@ plugins: [
        "save table contextmenu directionality emoticons template paste textcolor tinyfm "
       ], 
 ...
+```
