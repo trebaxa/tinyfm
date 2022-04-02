@@ -1,4 +1,4 @@
-# tinyfm
+# tinyfm - responsive filemanager for tinymce
 Tiny filemanager for tinyMCE or also as standalone solution
 
 ## Install
