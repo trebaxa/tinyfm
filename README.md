@@ -1,8 +1,12 @@
 # tinyfm
 Tiny filemanager for tinyMCE or also as standalone solution
 
-## configure config.json
-### cjs/tinyfm/config/config.json
+## Install
+Copy the /tinyfm folder to your server. For example www.mydomain.com/cjs/tinyfm
+Configure tinyMCE and tinyFM as descripted below.
+
+### configure config.json
+#### cjs/tinyfm/config/config.json
 ```
 {
     "relative_path_to_files": "..\/..\/file_server\/",
@@ -35,7 +39,7 @@ www.mydomain.com/cjs/tinyfm/
 **dont forget to escape the "/" in json like cjs\/tinyfm\/**
 ```
 
-## Configure tintyMCE
+### Configure tintyMCE
 ```
 ...
 external_filemanager_path:"!!PATH_TO_TINYFM_INSTALLATION!!",     
@@ -53,4 +57,9 @@ plugins: [
 ```
 !!PATH_TO_TINYFM_INSTALLATION!! => /cjs/tinyfm/
 !!ENTER_ACCESSKEY_FROM_TINYMFM_CONFIG!! => Accesskey defined in config.json
+```
+
+## Standalone call from a backend of your software
+```
+<iframe src="../cjs/tinyfm/fm.php?nr=1&standalone=1&lang=de&akey=!!ENTER_ACCESSKEY_FROM_TINYMFM_CONFIG!!" style="width:100%;height:800px;border:0px"></iframe>
 ```
