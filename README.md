@@ -21,6 +21,7 @@ Tiny filemanager for tinyMCE or also as standalone solution
     "ssl": "true"
 }
 ```
+```
 path: path to installation of tinfym. for example: cjs/tinfyfm
 relative_path_to_files: realtive path to medialibary from install path of tinyfm (where fm.php is located)
 path_to_files: the path to folder where the files are stored => www.mydomain.com/path_to_files/
@@ -32,6 +33,7 @@ www.mydomain.com/file_server/
 www.mydomain.com/cjs/tinyfm/
 
 **dont forget to escape the "/" in json like cjs\/tinyfm\/**
+```
 
 ## Configure tintyMCE
 ```
@@ -44,9 +46,10 @@ external_plugins: { "tinyfm" :  "!!PATH_TO_TINYFM_INSTALLATION!!/js/plugin.min.j
 plugins: [
        "advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
        "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
-       "save table contextmenu directionality emoticons template paste textcolor **tinyfm**"
+       "save table contextmenu directionality emoticons template paste textcolor tinyfm"
       ], 
 ...
-```
+
 !!PATH_TO_TINYFM_INSTALLATION!! => /cjs/tinyfm/
 !!ENTER_ACCESSKEY_FROM_TINYMFM_CONFIG!! >= Accesskey defined in config.json
+```
