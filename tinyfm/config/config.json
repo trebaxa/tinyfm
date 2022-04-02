@@ -1,0 +1,16 @@
+{
+    "relative_path_to_files": "..\/..\/file_server\/",
+    "path_to_files": "file_server\/",
+    "path": "cjs\/tinyfm\/",
+    "dateformat": "d.m.Y",
+    "access_key": "8a6636c1a8c2ebe3ef45186170fadb78",
+    "resize_images_to_max_size": true,
+    "file_permission": 493,
+    "folder_permission": 493,
+    "dropzone": {
+        "maxFilesize": "256",
+        "acceptedFiles": "",
+        "forbidden_ext": ""
+    },
+    "ssl": "true"
+}
