@@ -1,8 +1,8 @@
 # tinyfm
 Tiny filemanager for tinyMCE or also as standalone solution
 
-## config config.json
-### /tinyfm/config/config.json
+## configure config.json
+### cjs/tinyfm/config/config.json
 ```
 {
     "relative_path_to_files": "..\/..\/file_server\/",
@@ -22,7 +22,7 @@ Tiny filemanager for tinyMCE or also as standalone solution
 }
 ```
 path: path to installation of tinfym. for example: cjs/tinfyfm
-relative_path_to_files: realtive path to medialibary from install path of tinyfm (fm.php)
+relative_path_to_files: realtive path to medialibary from install path of tinyfm (where fm.php is located)
 path_to_files: the path to folder where the files are stored => www.mydomain.com/path_to_files/
 file_permission: 493 is equal with "0755". 
 resize_images_to_max_size: if true max width and height of images is set to 4000px
@@ -44,7 +44,9 @@ external_plugins: { "tinyfm" :  "!!PATH_TO_TINYFM_INSTALLATION!!/js/plugin.min.j
 plugins: [
        "advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
        "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
-       "save table contextmenu directionality emoticons template paste textcolor tinyfm "
+       "save table contextmenu directionality emoticons template paste textcolor **tinyfm**"
       ], 
 ...
 ```
+!!PATH_TO_TINYFM_INSTALLATION!! => /cjs/tinyfm/
+!!ENTER_ACCESSKEY_FROM_TINYMFM_CONFIG!! >= Accesskey defined in config.json
