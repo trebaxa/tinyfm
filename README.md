@@ -1,6 +1,37 @@
 # tinyfm
 Tiny filemanager for tinyMCE or also as standalone solution
 
+## config config.json
+### /tinyfm/config/config.json
+```
+{
+    "relative_path_to_files": "..\/..\/file_server\/",
+    "path_to_files": "file_server\/",
+    "path": "cjs\/tinyfm\/",
+    "dateformat": "d.m.Y",
+    "access_key": "YOUR_OWN_ACCESS_KEY",
+    "resize_images_to_max_size": true,
+    "file_permission": 493,
+    "folder_permission": 493,
+    "dropzone": {
+        "maxFilesize": "256",
+        "acceptedFiles": "",
+        "forbidden_ext": ""
+    },
+    "ssl": "true"
+}
+```
+path: path to installation of tinfym. for example: cjs/tinfyfm
+relative_path_to_files: realtive path to medialibary from install path of tinyfm (fm.php)
+path_to_files: the path to folder where the files are stored => www.mydomain.com/path_to_files/
+file_permission: 493 is equal with "0755". 
+resize_images_to_max_size: if true max width and height of images is set to 4000px
+
+From point of view from your domain:
+www.mydomain.com/file_server/
+www.mydomain.com/cjs/tinyfm/
+
+**dont forget to escape the "/" in json like cjs\/tinyfm\/**
 
 ## Configure tintyMCE
 ```
