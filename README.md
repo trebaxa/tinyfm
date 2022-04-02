@@ -52,5 +52,5 @@ plugins: [
 ```
 ```
 !!PATH_TO_TINYFM_INSTALLATION!! => /cjs/tinyfm/
-!!ENTER_ACCESSKEY_FROM_TINYMFM_CONFIG!! >= Accesskey defined in config.json
+!!ENTER_ACCESSKEY_FROM_TINYMFM_CONFIG!! => Accesskey defined in config.json
 ```
