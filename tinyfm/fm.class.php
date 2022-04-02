@@ -5,7 +5,7 @@
  * @author Harald Petrich
  *
  * @copyright  Copyright (C) Trebaxa GmbH&Co.KG. All rights reserved.
- * @license    GNU LESSER GENERAL PUBLIC LICENSE Version 2.1, February 1999
+ * @license    GNU General Public License v3.0
  * 
  * https://www.tinyfm.io
  * 
@@ -32,7 +32,9 @@ class fm extends fm_master {
     private static function init() {
         fm_config::set_config_value('path_to_files', ltrim(self::add_trailing_slash(fm_config::get_config_value('path_to_files')), DIRECTORY_SEPARATOR));
         fm_config::set_config_value('path', ltrim(self::add_trailing_slash(fm_config::get_config_value('path')), DIRECTORY_SEPARATOR));
-
+        if (empty(fm_config::get_config_value('file_permission'))) {
+            fm_config::set_config_value('file_permission', 0755);
+        }
         self::$root_to_files = fm::$root = self::add_trailing_slash(realpath($_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . self::add_trailing_slash(ltrim(fm_config::
             get_config_value('path_to_files'), DIRECTORY_SEPARATOR))));
         if (!isset($_SESSION['fm']['root'])) {
@@ -317,7 +319,7 @@ class fm extends fm_master {
         if (move_uploaded_file($_FILES['file']['tmp_name'], $local_file)) {
             chmod($local_file, fm_config::get_config_value('file_permission'));
             if (self::get_ext($local_file) == 'jfif') {
-                rename($local_file,  self::change_file_ext($local_file, 'jpg'));
+                rename($local_file, self::change_file_ext($local_file, 'jpg'));
                 $local_file = self::change_file_ext($local_file, 'jpg');
             }
             if (fm_config::get_config_value('resize_images_to_max_size') == true) {

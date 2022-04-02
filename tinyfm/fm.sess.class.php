@@ -5,7 +5,7 @@
  * @author Harald Petrich
  *
  * @copyright  Copyright (C) Trebaxa GmbH&Co.KG. All rights reserved.
- * @license    GNU LESSER GENERAL PUBLIC LICENSE Version 2.1, February 1999
+ * @license    GNU General Public License v3.0
  * 
  * https://www.tinyfm.io
  * 
